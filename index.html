@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment Parser</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+<div class="content-wrapper">
+    <div class="get-file">
+        <span class="get-file__title">Delete comments from code</span>
+        <div class="get-file__control">
+            <span>Choose "file.js": </span>
+            <input id="getFile" type="file">
+        </div>
+        <button class="start-button dt-button">Remove Comments</button>
+    </div>
+    <div class="results">
+        <div class="results__original">
+            <div class="results__title">Source code</div>
+            <div class="pretty_code">
+                <xmp class="prettyprint">
+                </xmp>
+            </div>
+        </div>
+        <div class="results__changed">
+            <div class="results__title">Edited code</div>
+            <div class="pretty_code">
+                <xmp class="prettyprint"></xmp>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

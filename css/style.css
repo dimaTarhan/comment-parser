@@ -1,0 +1,125 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.get-file {
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.get-file span {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+.get-file .dt-button {
+  color: darkgrey;
+  border-color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.get-file .dt-button:focus {
+  outline: none;
+}
+
+.get-file .active-button {
+  color: black;
+  background-color: limegreen;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.get-file .active-button:focus {
+  outline: none;
+}
+
+.get-file__control {
+  margin-bottom: 30px;
+}
+
+.get-file__control input {
+  width: 300px;
+  font-size: 18px;
+}
+
+.get-file__control span {
+  font-size: 18px;
+}
+
+.results {
+  height: calc(100vh - 280px);
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 2px solid lightgray;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 20px;
+}
+
+.results .results__original {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  border-right: 2px solid lightgray;
+}
+
+.results .results__changed {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+}
+
+.results .results__title {
+  font-size: 18px;
+  height: 20px;
+  text-align: center;
+  background-color: #eaeaea;
+  border-bottom: 2px solid lightgray;
+}
+
+.results .pretty_code {
+  margin-top: 0;
+  height: calc(100% - 30px);
+  margin-left: 50px;
+  overflow: auto;
+}
