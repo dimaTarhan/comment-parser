@@ -89,8 +89,17 @@
 
   .results__title{
     font-size: 18px;
+    height: 20px;
     text-align: center;
     background-color: #eaeaea;
     border-bottom: 2px solid lightgray;
   }
+
+  .pretty_code {
+    margin-top: 0;
+    height: calc(100% - 30px);
+    margin-left: 50px;
+    overflow: auto;
+  }
 }
+

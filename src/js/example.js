@@ -3,59 +3,25 @@
 function Animal(name) {
     this.name = name;
     this.speed = 0;
+    let testString = "//My test string";
+    let testCode = `
+        <div>
+            /*My test text*/
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+        </div>`;
+
+    let testUrl = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
 }
+
+const a = 'Test string';
+
+/*Hello from Dima Tarhan*/
+
+/*Hello from Dmytro
+Tarhan as
+FrontEnd Developer*/
 
 // Методы хранятся в прототипе
 Animal.prototype.run = function() {
     alert(this.name + " бежит!");
 };
-
-// --------- Класс-потомок -----------
-// Конструктор потомка
-function Rabbit(name) {
-    Animal.apply(this, arguments);
-}
-
-// Унаследовать
-Rabbit.prototype = Object.create(Animal.prototype);
-
-// Желательно и constructor сохранить
-Rabbit.prototype.constructor = Rabbit;
-
-// Методы потомка
-Rabbit.prototype.run = function() {
-    // Вызов метода родителя внутри своего
-    Animal.prototype.run.apply(this);
-    alert( this.name + " подпрыгивает!" );
-};
-
-// Готово, можно создавать объекты
-var rabbit = new Rabbit('Кроль');
-rabbit.run();
-
-function CoffeeMachine(power) {
-    // свойства конкретной кофеварки
-    this._power = power;
-    this._waterAmount = 0;
-}
-
-// свойства и методы для всех объектов класса
-CoffeeMachine.prototype.WATER_HEAT_CAPACITY = 4200;
-
-CoffeeMachine.prototype._getTimeToBoil = function() {
-    return this._waterAmount * this.WATER_HEAT_CAPACITY * 80 / this._power;
-};
-
-CoffeeMachine.prototype.run = function() {
-    setTimeout(function() {
-        alert( 'Кофе готов!' );
-    }, this._getTimeToBoil());
-};
-
-CoffeeMachine.prototype.setWaterAmount = function(amount) {
-    this._waterAmount = amount;
-};
-
-var coffeeMachine = new CoffeeMachine(10000);
-coffeeMachine.setWaterAmount(50);
-coffeeMachine.run();

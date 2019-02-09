@@ -24,8 +24,10 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
+    "prettify": "^0.1.7",
     "pug": "^2.0.3",
-    "sass": "^1.15.1"
+    "sass": "^1.15.1",
+    "save-dev": "^2.0.0"
   },
   "description": ""
 }
