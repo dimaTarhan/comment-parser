@@ -9,18 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
     function parseCode (e) {
         let target = e.target;
         if(!target.matches(".active-button"))return;
-        let stringPattern = /((["'])(?:(?:\\\\)|\\\2|(?!\\\2)\\|(?!\2).|[\n\r])*\2)/;
-        //ref: gfhd.com
-        let commentsPattern = /((["'])(?:(?:\\\\)|\\\2|(?!\\\2)\\|(?!\2).|[\n\r])*\2)|\/\*.*\*\/|\/\*(.*[\n\r])*.*\*\/|\/\/.*/g;
+        let stringPattern = /((["'`])(?:(?:\\\\)|\\\2|(?!\\\2)\\|(?!\2).|[\n\r])*\2)/;
+        let commentsPattern = /((["'`])(?:(?:\\\\)|\\\2|(?!\\\2)\\|(?!\2).|[\n\r])*\2)|\/\*.*\*\/|\/\*(.*[\n\r])*.*\*\/|\/\/.*/g;
         editedCode = originalCode.replace(commentsPattern, replacer);
 
-        document.querySelector(".results__changed .prettyprint").innerHTML = editedCode;
-        document.querySelector(".results__original .prettyprint").innerHTML = originalCode;
+        document.querySelector(".results__changed pre code").innerHTML = editedCode;
+        document.querySelector(".results__original pre code").innerHTML = originalCode;
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
 
         function replacer(reg) {
-            debugger;
-            console.log(stringPattern.exec(reg));
-
             if(stringPattern.test(reg)){
                 return reg;
             }
